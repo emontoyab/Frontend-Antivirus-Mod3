@@ -2,7 +2,7 @@ import { Link, useLocation } from "@remix-run/react";
 import { FaSignOutAlt } from "react-icons/fa"; // Ícono de salir
 import logo from "../assets/images/logo.svg";
 // import btnLogin from "../assets/images/btnLogin.svg";
-// import btnRegister from "../assets/images/btnRegister.svg";
+import btnRegister from "../assets/images/btnRegister.svg";
 import { useAuth } from "../utils/authCOntext"; // Importar el contexto de autenticación
 
 export default function Navbar() {
@@ -61,7 +61,7 @@ export default function Navbar() {
                       to="/admin"
                       className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
                     >
-                      Administrar Contenido
+                      Administrar
                     </Link>
                   </li>
                   {/* Botón de Gestión de Usuarios */}
@@ -70,7 +70,7 @@ export default function Navbar() {
                       to="/super-admin"
                       className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
                     >
-                      Gestión de Usuarios
+                      Usuarios
                     </Link>
                   </li>
                 </>
@@ -95,13 +95,15 @@ export default function Navbar() {
                   </Link>
                 </li>
               )}
-              {!isRegisterPage && (
+              {!isRegisterPage && ( */}
                 <li className="ml-16">
-                  <Link to="/registro">
-                    <img className="w-40" src={btnRegister} alt="btn" />
+                  <Link to="/registro"
+                  className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+                  >
+                    Regístrate
                   </Link>
                 </li>
-              )}
+              {/* )}
             </>
           )} */}
         </ul>

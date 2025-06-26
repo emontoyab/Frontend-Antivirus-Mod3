@@ -123,9 +123,14 @@ export default function Inicio() {
         </div>
 
         <div className="mt-12 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
-          <button className="bg-yellow-400 text-white font-semibold py-3 px-6 rounded-lg hover:bg-yellow-500 transition duration-200 font-raleway">
+            <a
+            href="https://www.fundacionantivirusparaladesercion.org/contacto"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-yellow-400 text-white font-semibold py-3 px-6 rounded-lg hover:bg-yellow-500 transition duration-200 font-raleway flex items-center justify-center"
+            >
             Contactános
-          </button>
+            </a>
           <a
             href="/about"
             className="text-lg md:text-xl text-blue-500 hover:text-blue-700 transition duration-200 font-raleway"
