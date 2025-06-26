@@ -1,13 +1,16 @@
 import { Link, useLocation } from "@remix-run/react";
 import { FaSignOutAlt } from "react-icons/fa"; // Ícono de salir
 import logo from "../assets/images/logo.svg";
-import btnLogin from "../assets/images/btnLogin.svg";
-import btnRegister from "../assets/images/btnRegister.svg";
+// import btnLogin from "../assets/images/btnLogin.svg";
+// import btnRegister from "../assets/images/btnRegister.svg";
 import { useAuth } from "../utils/authCOntext"; // Importar el contexto de autenticación
 
 export default function Navbar() {
   const location = useLocation(); // Obtiene la ruta actual
-  const { isAuthenticated, role, logout } = useAuth(); // Usar el contexto de autenticación
+  const { 
+    // isAuthenticated, 
+    // role, 
+    logout } = useAuth(); // Usar el contexto de autenticación
 
   // Manejar el cierre de sesión
   const handleLogout = () => {
@@ -17,8 +20,8 @@ export default function Navbar() {
 
   // Verificar si estamos en vistas específicas
   const isNovedadesPage = location.pathname === "/novedades";
-  const isLoginPage = location.pathname === "/ingreso";
-  const isRegisterPage = location.pathname === "/registro";
+  // const isLoginPage = location.pathname === "/ingreso";
+  // const isRegisterPage = location.pathname === "/registro";
 
   return (
     <div>
@@ -30,27 +33,27 @@ export default function Navbar() {
           </li>
           {!isNovedadesPage && (
             <li>
-              <Link to="#oportunidades">Oportunidades</Link>
+              <Link to="/#oportunidades">Oportunidades</Link>
             </li>
           )}
           <li>
-            <Link to="#servicios">Servicio</Link>
+            <Link to="/#servicios">Servicio</Link>
           </li>
           {/* Mostrar el enlace de Novedades solo si el usuario está autenticado */}
-          {isAuthenticated && !isLoginPage && !isRegisterPage && (
+          {/* {isAuthenticated && !isLoginPage && !isRegisterPage && ( */}
             <li>
               <Link to="/novedades">Novedades</Link>
             </li>
-          )}
+          {/* )} */}
         </ul>
         <div className="w-2/12 flex justify-center z-10">
           <img className="w-28" src={logo} alt="logo" />
         </div>
         <ul className="flex items-center justify-evenly z-10">
-          {isAuthenticated ? (
+          {/* {isAuthenticated ? ( */}
             <>
               {/* Mostrar opciones solo para admin */}
-              {role === "admin" && (
+              {/* {role === "admin" && ( */}
                 <>
                   {/* Botón de Administrar Contenido */}
                   <li>
@@ -71,7 +74,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                 </>
-              )}
+              {/* )} */}
               {/* Botón de Cerrar Sesión */}
               <li>
                 <button
@@ -83,7 +86,7 @@ export default function Navbar() {
                 </button>
               </li>
             </>
-          ) : (
+          {/* ) : (
             <>
               {!isLoginPage && (
                 <li className="mr-16">
@@ -100,7 +103,7 @@ export default function Navbar() {
                 </li>
               )}
             </>
-          )}
+          )} */}
         </ul>
       </nav>
     </div>

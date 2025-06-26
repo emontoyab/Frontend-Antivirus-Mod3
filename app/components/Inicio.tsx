@@ -138,7 +138,7 @@ export default function Inicio() {
       {/* Carrusel de oportunidades */}
       <section className="py-12 w-full">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-blue-900 mb-8">
+          <h2 id="oportunidades" className="text-3xl font-bold text-center text-blue-900 mb-8">
             Oportunidades Destacadas
           </h2>
 
@@ -178,7 +178,7 @@ export default function Inicio() {
       </section>
 
       {/* Carrusel de servicios */}
-      <section className="py-12 w-full">
+      <section id="servicios" className="py-12 w-full">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-blue-900 mb-8">
             Nuestros Servicios
